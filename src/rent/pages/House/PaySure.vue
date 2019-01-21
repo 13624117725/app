@@ -1,0 +1,655 @@
+<style scoped lang="scss">
+     @import "../../style/theme.scss";
+     $height: 0.7rem;
+    .top{
+         height:0.8rem;
+    }
+    .house-list {
+        padding-top: 1.3rem;
+        background-color: #e8e8e8;
+        padding-bottom: 1.5rem;
+    }
+    .houseContent {
+        width:100%;
+        background-color: #fff;
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 0.4rem 0.2rem;
+        .houseId {
+            height: 0.6rem;
+            line-height: 0.6rem;
+            margin: 0 auto;
+            padding-top: 0.2rem;
+            font-size:0.28rem;
+          	color:black;
+            .left {
+                float:left;
+                width: 1.8rem;
+                text-align: left;
+            }
+            .right{
+
+                float:left;
+                color: #999999;
+            }
+        }
+        .chd {
+            height: 0.6rem;
+            line-height: 0.6rem;
+            margin: 0 auto;
+            font-size:0.28rem;
+          	color:black;
+            .left {
+                float:left;
+                width: 1.8rem;
+                text-align: left;
+            }
+            .right{
+            	width:4.5rem;
+                height: 0.6rem;
+                float:left;
+                color: #999999;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                text-align:left;
+
+            }
+        }
+        .chd .paycolor {
+          color:#E45044;
+          font-weight:bold;
+        }
+    }
+    .stage {
+        width:100%;
+        height:0.78rem;
+        line-height:0.78rem;
+        background-color:#fff;
+        .left {
+            float:left;
+            font-size:0.28rem;
+            color: black;
+            margin-left:0.3rem;
+        }
+        .right{
+            float:right;
+            font-size:0.33rem;
+            color: $labelThree;
+            margin-right:0.3rem;
+            font-weight: bold;
+        }
+    }
+    .stage1{
+
+        width:100%;
+        height:1.1rem;
+        line-height:1.1rem;
+        box-sizing: border-box;
+        padding: 0 0.4rem;
+        background-color:#fff;
+        .left {
+        	width: 1.8rem;
+            float:left;
+            color: black;
+            font-size: 0.28rem;
+            font-size:0.28rem;
+            text-align: left;
+            margin-left: 0;
+        }
+        .right{
+            float:left;
+            font-size:0.28rem;
+            color: #E45044;
+            font-weight: bold;
+        }
+
+    }
+    .number{
+        width:92%;
+        height:auto;
+        line-height:1.3rem;
+        background-color:#fff;
+        margin: 0.4rem auto 0;
+        padding:0.3rem 0;
+        .content {
+          width:90%;
+          margin:0 auto;
+          border:1px solid #666;
+          border-bottom:0 solid #666;
+
+          .ulname {
+            height:0.8rem;
+            line-height:0.8rem;
+            border-bottom:1px solid #666;
+            padding:0.06rem;
+            li {
+              float:left;
+              width:25%;
+              box-sizing:border-box;
+              height:0.8rem;
+              background-color:#F3A654;
+              text-align:center;
+              border-right:1px solid #fff;
+              color:#fff;
+              font-size:0.25rem;
+            }
+            li:last-child {
+              border:none;
+            }
+          }
+          .ullist {
+            height:0.8rem;
+            line-height:0.8rem;
+            border-bottom:1px solid #666;
+            li {
+              float:left;
+              width:25%;
+              box-sizing:border-box;
+              height:0.8rem;
+              text-align:center;
+              border-right:1px solid #ccc;
+              color:#666;
+              font-size:0.25rem;
+            }
+            li:last-child {
+              border:none;
+            }
+          }
+        }
+    }
+    .rentMoney {
+        width:100%;
+        height:3rem;
+        background-color:#fff;
+        .top{
+          width:100%;
+          height:1.5rem;
+          line-height:1.5rem;
+          .zujin {
+            font-size:0.28rem;
+            float:left;
+            margin-left:0.4rem;
+            color: black;
+          }
+          .yuan {
+            margin-left:2%;
+            font-size:0.28rem;
+            float:left;
+            color:#999999;
+          }
+        }
+        .bottom {
+          width:100%;
+          height:1.5rem;
+          .left {
+            width:0.4rem;
+            height: 0.4rem;
+            float:left;
+            box-sizing:border-box;
+          	margin-left: 1rem;
+          }
+          .middle {
+            width:40%;
+            text-align:center;
+            box-sizing:border-box;
+            font-size:0.6rem;
+            color:#E24F57;
+            display: block;
+            border: 3px solid #fff;
+            margin:0 0 0.2rem 0.6rem;
+            float: left;
+            position: relative;
+            top: -0.1rem;
+            left: 0.25rem;
+          }
+          .right {
+            width:0.4rem;
+            height: 0.4rem;
+            float:right;
+            box-sizing:border-box;
+          	margin-right: 1rem;
+          }
+          .left,.right{
+          	margin-top: 0.1rem
+          }
+        }
+    }
+    .sumbit {
+      width: 100%;
+      height:1rem;
+      line-height:1rem;
+      font-size:0.32rem;
+      text-align:center;
+      background-color:#E34B3E;
+      color:#fff;
+      position: fixed;
+      bottom:0;
+      left: 0;
+    }
+    .clear{
+      clear:both;
+    }
+    .wechat-pay {
+        width:100%;
+        position:relative;
+        height:1.1rem;
+        line-height:1.1rem;
+        background-color:#fff;
+        margin: 0.1rem auto 0;
+        overflow: hidden;
+        .left {
+            float:left;
+            font-size:0.35rem;
+            margin-left: 1rem;
+        }
+        .imgg{
+            float: left;
+            width: 0.6rem;
+            position: absolute;
+            margin-left:.3rem;
+            top: 50%;
+            margin-top: -0.3rem;
+        }
+//         input[type=radio] {
+//     background-image: url($UI/agenthouseApp/image/radiobtn2.png);
+//     -webkit-appearance: none;
+//     width: 13px;
+//     height: 13px;
+// }
+
+// input[type=radio]:checked {
+// 	background-image: url($UI/agenthouseApp/image/radiobtn1.png);
+// }
+        input[type=radio]{
+            -webkit-appearance: none;
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-top:0.3rem;
+            float: right;
+            margin-right:0.2rem;
+            border:none;
+            background-image:url('../../../../static/rent/img/collection/weixuanzhong.png');
+            background-size: 100%;
+        }
+        input[type=radio]:checked{
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-top:0.3rem;
+            float: right;
+            margin-right:0.2rem;
+            border:none;
+            background:url('../../../../static/rent/img/collection/xuanzhong.png');
+            background-size: 100%;
+        }
+    }
+    .own-pay {
+        width:100%;
+        height:1.1rem;
+        line-height:1.1rem;
+        background-color:#fff;
+        margin: 0 auto;
+        overflow: hidden;
+        position:relative;
+        .left {
+            float:left;
+            font-size:0.28rem;
+            margin-left: 1.3rem;
+        }
+        .imgg{
+            float: left;
+            width: 0.6rem;
+            position: absolute;
+            margin-left:.3rem;
+            top: 50%;
+            margin-top: -0.3rem;
+        }
+        input[type=radio]{
+            -webkit-appearance: none;
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-top:0.3rem;
+            float: right;
+            margin-right:0.2rem;
+            border:none;
+            background-image:url('../../../../static/rent/img/collection/weixuanzhong.png');
+            background-size: 100%;
+        }
+        input[type=radio]:checked{
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-top:0.3rem;
+            float: right;
+            margin-right:0.2rem;
+            border:none;
+            background:url('../../../../static/rent/img/collection/xuanzhong.png');
+            background-size: 100%;
+        }
+    }
+    .msg{
+        width:95%;
+        height: 1rem;
+        line-height:0.5rem;
+        margin:0.2rem auto;
+        background-color:#fff;
+        color: #e24e59;
+        font-size:0.3rem;
+        text-indent: 24px;
+        font-weight:bold;
+    }
+    .emptyios{
+		height: 1.3rem;
+	}
+	.emptyandroid{
+		height: 1.1rem;
+    }
+    .Wexsubmit{
+		padding-top: 0;
+	}
+</style>
+
+<template>
+	<div>
+	    <div class="house-list" style="background: white;width: 100%;height: 100%;" :class="{Wexsubmit:isWex}">
+
+	        <!-- 支付详情 -->
+	        <div class="houseContent">
+	            <div class="houseId">
+	                <div class="left">合同编号：</div>
+	                <div class="right">{{saleContractId}}</div>
+	            </div>
+	            <div class="address chd">
+	                <div class="left">物业地址：</div>
+	                <div class="right"><marquee>{{houseAddress}}</marquee></div>
+	            </div>
+	            <div class="term chd">
+	                <div class="left">租金期数：</div>
+	                <div class="right">{{number}}</div>
+	            </div>
+	            <div class="rent chd">
+	                <div class="left">已交次数：</div>
+	                <div class="right">{{submitCount}}次</div>
+	            </div>
+	            <div class="payMent chd">
+	                <div class="left">应缴金额：</div>
+	                <div class="right paycolor">￥ {{planRent}}</div>
+	            </div>
+	            <div class="rent chd">
+	                <div class="left">已抵扣：</div>
+	                <div class="right paycolor">￥ {{discount||0}}</div>
+	            </div>
+	            <div class="payMent chd">
+	                <div class="left">已使用红包：</div>
+	                <div class="right paycolor">￥ {{couponsDiscount||0}}</div>
+	            </div>
+	        </div>
+	        <div style="height: 0.2rem;background: #EEEEEE;"></div>
+	        <!-- 已交金额 -->
+	        <div class="stage stage1">
+	            <div class="left">已交金额：</div>
+	            <div class="right">{{realRent}}元</div>
+	            <div class="clear"></div>
+	        </div>
+	        <div style="height: 0.2rem;background: #EEEEEE;"></div>
+	        <!-- 本期租金 -->
+	        <div class="rentMoney">
+	            <div class="top">
+	              <div class="zujin">本期支付租金</div>
+	              <div class="yuan">(元)</div>
+	            </div>
+	            <div class="bottom">
+	              <div class="left" @click="left">
+	              	<img src="../../../../static/rent/fyxq/icon/jianjian.png" alt="" />
+	              </div>
+	                <input class="middle" onkeyup="this.value=this.value.replace(^\\d+(\\.\\d{2})?$,'')" @contextmenu.prevent type="number" maxlength="7" v-model="rentMoney">
+
+	              <div class="right" @click="right">
+	              	<img src="../../../../static/rent/fyxq/icon/jiajia.png" alt="" />
+	              </div>
+	            </div>
+	        </div>
+	        <div style="height: 0.2rem;background: #EEEEEE;"> </div>
+	        <!-- 支付方式 -->
+	        <div class="stage">
+	            <div class="left">支付方式</div>
+	        </div>
+	        <div class="own-pay" v-if="!this.isWechat">
+	            <img  class="imgg"  src="../../../../static/rent/fyxq/zhifubao.png"  />
+	            <div class="left">支付宝支付</div>
+	            <input ref="ali" type="radio" checked name="pay">
+	        </div>
+
+	        <div style="background-color: #fff;width:100%;" v-if="this.isWechat">
+	        	<div class="msg" v-if="">温馨提示：如果您的租金超过3000元，请换卡分次支付，或隔日继续支付！</div>
+
+	        </div>
+	        <div class="wechat-pay" v-if="this.isWechat">
+	            <img class="imgg" src="../../../../static/rent/fyxq/wx.png"  />
+	            <div class="left">微信支付</div>
+	            <input ref="wx" type="radio" checked name="pay">
+	        </div>
+
+
+	    </div>
+    <!-- 确认提交 -->
+        <div class="sumbit" @click="sumbitClick">
+            确认支付
+        </div>
+    </div>
+</template>
+
+<script>
+// import onRadio from '../../../../static/img/collection/xuanzhong.png';
+// import unRadio from '../../../../static/img/collection/weixuanzhong.png';
+    export default {
+        name: 'Collection',
+        data() {
+            return {
+            	androidOrIos:true,	//默认为安卓登录
+                username: "",
+                password: "",
+                rentMoney:0,                                  //租金
+                receiptPlanId:this.$route.query.receiptPlanId,   //收款计划id
+                saleContractId:this.$route.query.saleContractId,//合同编号
+                houseAddress:"",
+                number : "",
+                submitCount : "",
+                planRent : "",
+                realRent : "",
+                houseName:"",
+                isWechat:true,
+                urlId:8885,
+                userId:"",
+                payAmount:'',	//传给宗泽支付金额
+                couponsDiscount:"",
+                discount:"",
+                receiptWayCode:"",  // 收款渠道
+                isWex:false,
+            }
+        },
+        components: {
+
+        },
+        created(){
+            // debugger;
+            this.getPayReceiptList();
+            this.isWechat = this.isECTouch();//判断是否是微信浏览器
+			if(this.isECTouch()){
+                 this.isWex = true;
+            }
+			this.isIosAndroid();
+        },
+        methods: {
+            //获取支付信息
+            getPayReceiptList(){
+                this.post("RentContractController/getPayReceiptList",{
+                    "receiptPlanId":this.receiptPlanId,
+                    "saleContractId":this.saleContractId,
+                }).then((res)=>{
+                    var res = res.data;
+                    this.rentMoney = res.receiptPlan.differencesRent < 0 ? 0 : res.receiptPlan.differencesRent;
+                    this.saleContractId = res.contractInfo.saleContractId;
+                    this.houseAddress = res.contractInfo.houseAddress;
+                    this.number = res.receiptPlan.number;
+                    this.submitCount = res.receiptPlan.submitCount;
+                    this.planRent = res.receiptPlan.planRent;
+                    this.realRent = res.receiptPlan.realRent;
+                    this.houseName = res.contractInfo.houseName;
+                    this.couponsDiscount = res.receiptPlan.couponsDiscount,
+                    this.discount = res.receiptPlan.discount
+                })
+            },
+            left() {
+                if(parseInt(this.rentMoney) <= 500){
+                    this.rentMoney = parseInt(this.rentMoney);
+                }else{
+                    this.rentMoney = parseInt(this.rentMoney) - 100;
+                }
+            },
+            right() {
+              this.rentMoney = parseInt(this.rentMoney) + 100;
+            },
+            //支付
+            sumbitClick(){
+            	if(this.isWechat){
+            		if(this.$refs.wx.checked){//选中微信
+		                this.depositPayOrderWechat();//微信支付接口
+		            }
+            	}else if(this.$refs.ali.checked){//选中支付宝
+                   	this.depositPayOrderAli();//支付宝支付接口
+                }
+            },
+            //微信支付
+            depositPayOrderWechat(){
+                let openId = "";
+                this.post("PayController/rentChargePayOrder",{
+                    "receiptPlanId":this.receiptPlanId,
+                    "planRent":this.planRent,
+                    "realReceipt":this.rentMoney,
+                    "openId":openId,
+                    "receiptSubjectCode":"0057001",
+                    "receiptWayCode":this.receiptWayCode,
+                    "receiptTypeCode":"0053003",
+                }).then((res)=>{
+                    if(this.isWechat){
+                        let openId = this.getStorage(this.KEYS.OPENID);
+                        window.location.href="https://www.guoanfamily.com/commonPlatform/pay/wxpay.html?tradeNo="+res.data.receiptId+"&payMoney="+res.data.realReceipt+"&userID="+res.data.userId+"&nameGoods="+this.houseName+"&urlId=8885&openid="+ openId+"&receiptPlanId="+this.receiptPlanId+"&saleContractId="+this.saleContractId; //测试
+                    }else{
+                        var ip =returnCitySN['cip'];//获取ip地址，勿动
+                        var url = "https://www.guoanfamily.com/commonPlatform/pay/mwxpay.html";//支付路径，固定
+                        var urlId = 8901;//urlId为以后通知的id 定金 8884 租金8885
+                        var notifyURL = 'https://www.guoanfamily.com/common/wxPay/wxOrderNotify/' + urlId;//通知地址，勿动
+                        var nameGoods =this.houseName ;//商品名称
+                        var tradeNo = res.data.receiptId;//订单号
+                        var receiptPlanId = this.receiptPlanId;
+                        var saleContractId = this.saleContractId;
+                        var userId = res.data.userId;//用户id
+                        var payMoney = this.rentMoney;//支付金额
+                        var redirectUrl=encodeURIComponent("https://www.guoanfamily.com/commonPlatform/pay/returnWap.html?receiptPlanId="+receiptPlanId+"&saleContractId="+saleContractId)
+                        window.location.href=url+"?userId="+userId+"&body="+encodeURIComponent(nameGoods)+"&notifyURL="+ encodeURIComponent(notifyURL)+"&outTradeNo="+ tradeNo+"&totalFee="+payMoney * 100+"&spbillCreateIp="+ip+"&tradeType=MWEB&sceneInfo="+encodeURIComponent(JSON.stringify({"h5_info": {"type":"Wap","wap_url": "https://www.guoanfamily.com","wap_name": "国安家租房"}}))+"&redirectUrl="+redirectUrl
+                    }
+                })
+            },
+            //支付宝支付
+            depositPayOrderAli(){//下定生成订单号，调用支付宝支付
+				var self = this;
+                this.post("PayController/rentChargePayOrder",{
+                    "receiptPlanId":this.receiptPlanId,             
+                    "planRent":this.planRent,               
+                    "realReceipt":this.rentMoney,            
+                    "openId":"",                  
+                    "receiptSubjectCode":"0057001",                 
+                    "receiptWayCode":this.receiptWayCode,  //收款渠道               
+                    "receiptTypeCode":"0053004",   //收款方式
+                }).then((res => {
+                    if(res.code == 0){
+                        self.receiptId = res.data.receiptId;
+                        self.payAmount = res.data.realReceipt;
+                    	//核对订单号与金额接口
+						this.post('PayController/checkOrder',{
+							"orderType":"1",
+		            		"urlId":'8901',
+		            		"userId":res.data.userId,
+		            		"outTradeNo":res.data.receiptId,
+		            		"subject":self.houseName,
+		            		"totalAmount":res.data.realReceipt
+		            	}).then((response) => {
+		            		if(response.code === 0){
+		            			//订单号校验成功,执行cordova支付宝支付接口
+                                let payInfo= response.data.data;
+                                let platform =  localStorage.getItem('platform');
+								if(platform == null || platform =='null' || platform == undefined){
+                                    let otherParams = escape("&receiptId="+res.data.receiptId+"&saleContractId="+this.saleContractId+"&receiptPlanId="+this.receiptPlanId);
+                                    window.location.href="http://act.guoanfamily.com/common/AlipayController/toPay/8901?tradeNo="+res.data.receiptId+"&payMoney="+res.data.realReceipt+"&nameGoods="+self.houseName+"&userId="+res.data.userId+"&otherParams="+otherParams;
+								}else{
+                                    let cordovapay;
+                                    if (cordova.plugins.alipay) {
+                                        cordovapay = cordova.plugins.alipay.payment;
+                                    } else {
+                                        cordovapay = window.Alipay.pay;
+                                    }
+                                    cordovapay(payInfo,function success(e){
+	                                    if(e.resultStatus == '9000'){
+	                                        self.msgalert('支付成功');
+	                                        self.$router.push({path:"/PaymentDetails",query:{saleContractId:self.saleContractId,receiptPlanId:self.receiptPlanId}})
+	                                    }else if(e.resultStatus == "8000"){
+	                                        self.msgalert('处理中');
+	                                    }else if(e.resultStatus == "4000"){
+	                                        self.msgalert('订单支付失败');
+	                                    }else if(e.resultStatus == "6001"){
+	                                        self.msgalert('用户中途取消');
+	                                    }else if(e.resultStatus == "6002"){
+	                                        self.msgalert('网络连接出错');
+	                                    }
+                                    },function error(e){
+                                   	 	self.msgalert('失败');
+                                    });
+                                }
+                                }
+                            })
+                    }
+
+                }))
+            },
+            isIosAndroid(){
+				//判断用户的来源和收款渠道
+				var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    //微信
+					this.receiptWayCode = "0058005";
+					//console.log("微信");
+                } else if(!window.location.host.indexOf("m.zufang.guoanfamily.com") === -1){
+                	//在m站中打开
+                	this.receiptWayCode = "0058004";
+					//console.log("m站");
+                } else if(this.CheckAndroiIos()){
+                	//安卓APP
+                	this.receiptWayCode = "0058007";
+					//console.log("安卓APP");
+                }else{
+                	//IOS APP
+                	this.receiptWayCode = "0058008";
+					//console.log("ios APP");
+                }
+			},
+			CheckAndroiIos(){
+				//安卓返回true,ios返回false
+	            let u = navigator.userAgent;
+	            let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	            let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	            if (isAndroid === true && isiOS === false) {
+	                return true;
+	            }
+	            if (isAndroid === false && isiOS === true) {
+	                return false;
+	            }
+			},
+            msgalert(msg) {
+				this.$vux.toast.show({
+					text: msg,
+					type: "text"
+				});
+			}
+        }
+    }
+</script>
